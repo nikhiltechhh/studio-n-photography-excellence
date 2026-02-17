@@ -72,6 +72,19 @@ const HeroSection = () => {
           ))}
         </div>
       </div>
+
+      {/* Tagline strip */}
+      <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 py-16 md:py-20 px-4">
+        <h2 className="font-serif text-foreground text-3xl md:text-4xl lg:text-5xl font-light leading-tight max-w-md">
+          I'm Nikhil, a UK<br />
+          Editorial<br />
+          Photographer
+        </h2>
+        <div className="hidden md:block w-[1px] h-24 bg-muted-foreground/40" />
+        <p className="uppercase text-xs md:text-sm tracking-[0.3em] text-muted-foreground text-center font-serif italic">
+          Covering the UK &amp;<br />Worldwide
+        </p>
+      </div>
     </section>
   );
 };
