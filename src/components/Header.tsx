@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/logo.jpg";
 
@@ -7,6 +8,7 @@ const navItems = ["Home", "About", "Services", "Work", "Contact"];
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -16,6 +18,10 @@ const Header = () => {
 
   const scrollToSection = (id: string) => {
     setIsOpen(false);
+    if (id.toLowerCase() === "contact") {
+      navigate("/contact");
+      return;
+    }
     const el = document.getElementById(id.toLowerCase());
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
