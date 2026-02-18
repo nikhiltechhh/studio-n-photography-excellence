@@ -78,12 +78,11 @@ const ProjectDetail = () => {
       <section className="px-6 md:px-12 lg:px-20 py-16 md:py-24">
         <div className="max-w-6xl mx-auto">
           {/* Row-based gallery mimicking the reference */}
-          <div className="flex flex-col gap-6">
-            {/* Two-column rows */}
+          <div className="flex flex-col gap-3">
             {chunkGallery(project.gallery).map((row, rowIdx) => (
               <div
                 key={rowIdx}
-                className={`grid gap-6 ${
+                className={`grid gap-3 ${
                   row.length === 3
                     ? "grid-cols-1 md:grid-cols-3"
                     : row.length === 2
@@ -94,22 +93,16 @@ const ProjectDetail = () => {
                 {row.map((photo, i) => (
                   <motion.div
                     key={`${rowIdx}-${i}`}
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: i * 0.1 }}
+                    transition={{ duration: 0.5, delay: i * 0.08 }}
                     className="overflow-hidden"
                   >
                     <img
                       src={photo.src}
                       alt={photo.alt}
-                      className={`w-full object-cover transition-transform duration-700 hover:scale-[1.02] ${
-                        photo.span === "tall"
-                          ? "aspect-[3/4]"
-                          : photo.span === "wide"
-                          ? "aspect-[16/10]"
-                          : "aspect-[4/5]"
-                      }`}
+                      className="w-full aspect-[4/3] object-cover transition-transform duration-700 hover:scale-[1.02]"
                     />
                   </motion.div>
                 ))}
