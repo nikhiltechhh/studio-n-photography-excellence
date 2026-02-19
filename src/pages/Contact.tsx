@@ -41,12 +41,20 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Back button */}
-      <button
+
+      {/* <button */}
+
+      {/* <button
+
         onClick={() => navigate("/")}
         className="fixed top-6 left-6 z-50 nav-link text-xs flex items-center gap-2 hover:text-primary"
       >
         ← Back
+
       </button>
+
+      </button> */}
+
 
       {/* Hero */}
       <div className="relative w-full h-[60vh] md:h-[75vh] overflow-hidden">
@@ -187,9 +195,11 @@ const Contact = () => {
             <input name="likeAbout" value={formData.likeAbout} onChange={handleChange} className={inputClass} required />
           </div>
 
-          {/* How did you hear */}
+                   {/* How did you hear */}
           <div>
-            <label className="font-serif text-muted-foreground text-sm mb-2 block">How did you hear about me? *</label>
+            <label className="font-serif text-muted-foreground text-sm mb-2 block">
+              How did you hear about me? *
+            </label>
             <textarea
               name="hearAbout"
               rows={4}
@@ -199,11 +209,13 @@ const Contact = () => {
               className={`${inputClass} resize-none`}
               required
             />
-            <div className="mt-3 space-y-1">
+            {/* <div className="mt-3 space-y-1">
               {hearAboutOptions.map((opt) => (
-                <p key={opt} className="font-serif text-foreground text-sm">{opt}</p>
+                <p key={opt} className="font-serif text-foreground text-sm">
+                  {opt}
+                </p>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* Submit */}

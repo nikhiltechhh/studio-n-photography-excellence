@@ -32,9 +32,7 @@ const Footer = () => {
           <ul className="space-y-3">
             <li><span className="font-serif text-muted-foreground text-sm underline underline-offset-4 decoration-border cursor-pointer hover:text-foreground transition-colors">Golden Hour Wedding at the Manor</span></li>
             <li><span className="font-serif text-muted-foreground text-sm underline underline-offset-4 decoration-border cursor-pointer hover:text-foreground transition-colors">Editorial Bridal Portrait Session</span></li>
-            <li><span className="font-serif text-muted-foreground text-sm underline underline-offset-4 decoration-border cursor-pointer hover:text-foreground transition-colors">Product Photography for Luxury Brand</span></li>
             <li><span className="font-serif text-muted-foreground text-sm underline underline-offset-4 decoration-border cursor-pointer hover:text-foreground transition-colors">Fashion Model Shoot in Leicester</span></li>
-            <li><span className="font-serif text-muted-foreground text-sm underline underline-offset-4 decoration-border cursor-pointer hover:text-foreground transition-colors">Destination Wedding in the Cotswolds</span></li>
           </ul>
         </div>
       </div>
@@ -42,7 +40,7 @@ const Footer = () => {
       {/* PARTITION 2: Logo divider */}
       <div className="max-w-6xl mx-auto flex items-center gap-6 py-4">
         <div className="flex-1 h-[1px] bg-border" />
-        <img src={logo} alt="Studio N" className="h-14 w-auto" />
+        <img src="https://i.ibb.co/Ng4LFgTp/8n.png" alt="Studio N" className="h-14 w-auto" />
         <div className="flex-1 h-[1px] bg-border" />
       </div>
 
